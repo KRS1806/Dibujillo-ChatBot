@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<section class="background position-relative">
+    <div class="container">
+        <div class="welcome-label" id="welcome-label" style="color: rgb(253, 251, 251); font-size: 33px;">
+            Formato permitido jpg, jpeg o png.. <span style="filter: brightness(0) invert(1);"></span>
+        </div>
+
+        <div id="response" class="mt-4">
+            <div id="messages" class="mb-5"></div>
+        </div>
+
+        <!-- Modal para mostrar la imagen en grande -->
+        <div id="imageModal" class="modal" onclick="closeModal()">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="expandedImg">
+        </div>
+
+
+        <!-- Contenedor de entrada y botones en una sola línea -->
+        <div class="input-group input-group-custom">
+            <div class="d-flex flex-column align-items-center justify-content-center text-center">
+                <!-- Mensaje de espera encima del input -->
+                <div id="wait-message">
+                    <div aria-label="Orange and tan hamster running in a metal wheel" role="img"
+                        class="wheel-and-hamster">
+                        <div class="wheel"></div>
+                        <div class="hamster">
+                            <div class="hamster__body">
+                                <div class="hamster__head">
+                                    <div class="hamster__ear"></div>
+                                    <div class="hamster__eye"></div>
+                                    <div class="hamster__nose"></div>
+                                </div>
+                                <div class="hamster__limb hamster__limb--fr"></div>
+                                <div class="hamster__limb hamster__limb--fl"></div>
+                                <div class="hamster__limb hamster__limb--br"></div>
+                                <div class="hamster__limb hamster__limb--bl"></div>
+                                <div class="hamster__tail"></div>
+                            </div>
+                        </div>
+                        <div class="spoke"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Contenedor de botones y input -->
+            <div class="d-flex">
+                <form id="chat-form" style="display: flex;" class="w-100">
+                    <!-- Botón de selección de archivo con icono de flecha hacia arriba -->
+                    <button class="btn-rosado-vino" id="imageButton" type="button">
+                        <i class="fas fa-arrow-up"></i>
+                        <input type="file" id="imageInput" accept=".jpg, .jpeg, .png" style="display: none;">
+                    </button>
+
+                    <!-- Input de texto (con flex-grow para ocupar el espacio disponible) -->
+                    <input type="text" autofocus id="textInput" placeholder="Escribe tu mensaje aquí..." required
+                        class="form-control mx-1" style="flex-grow: 1; width: 500px;">
+
+                    <!-- Botón de enviar mensaje con icono de flecha hacia la derecha -->
+                    <button type="submit" class="btn-rosado-vino">
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
