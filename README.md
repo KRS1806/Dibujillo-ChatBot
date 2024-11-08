@@ -53,7 +53,7 @@ GEMINI_API_KEY = "YOUR_API_KEY"
 $ python manage.py runserver
 ```
 
-- Click on the "Elegir Archivo" button and select your image
+- Click on the arrow button and select your image
     Note: The bot will not work if you don't give it an image
 
 - Ask the bot your question or indication on the asigned space
