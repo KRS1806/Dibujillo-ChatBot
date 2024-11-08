@@ -4,5 +4,3 @@ db.sqlite3
 migrations
 .env
 test
-context.txt
-README.md
