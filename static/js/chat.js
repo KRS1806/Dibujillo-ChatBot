@@ -16,21 +16,16 @@ socket.onmessage = (event) => {
         messagesDiv.innerHTML += '<div class="message-container bot"><div class="message-bubble bot"><strong>Bot:</strong> ' + data.response + '</div></div>';
     }
     else{
-        if (data.response === undefined || data.response === null){
-            messagesDiv.innerHTML += '<div class="message-container user"><div class="message-bubble user" style="margin-top: 80px;"><strong>You:</strong> Sin pregunta</div></div>';
-            messagesDiv.innerHTML += '<div class="message-container bot"><div class="message-bubble bot"><strong>Bot:</strong> Hay un error en la imagen</div></div>';
-        }else {
-            messagesDiv.innerHTML += `
-            <div class="message-container user">
-                <div class="message-bubble user" style="margin-top: 80px;">
-                <strong>You:</strong> ${data.message}<br>
-                <img src="${data.image}" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; cursor: pointer;">
-                </div>
+        messagesDiv.innerHTML += `
+        <div class="message-container user">
+            <div class="message-bubble user" style="margin-top: 80px;">
+            <strong>You:</strong> ${data.message}<br>
+            <img src="${data.image}" onclick="openModal(this)" style="max-width: 100px; max-height: 100px; cursor: pointer;">
             </div>
-            `;
-            // Mostrar la respuesta del bot
-            messagesDiv.innerHTML += '<div class="message-container bot"><div class="message-bubble bot"><strong>Bot:</strong> ' + data.response + '</div></div>';
-        }
+        </div>
+        `;
+        // Mostrar la respuesta del bot
+        messagesDiv.innerHTML += '<div class="message-container bot"><div class="message-bubble bot"><strong>Bot:</strong> ' + data.response + '</div></div>';
     }
     document.getElementById('wait-message').style.display = 'none';
     welcome.style.display = 'none';

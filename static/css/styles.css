@@ -1,3 +1,6 @@
+
+
+
 body, html {
     margin: 0;
     padding: 0;
@@ -6,10 +9,9 @@ body, html {
     color: white;
 }
 
-.nav-dibujillo {
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0px 0px 10px rgb(0, 0, 0);
-    height: 70px;
+
+p {
+    font-style: italic;
 }
 
 .input-group-custom {
@@ -179,9 +181,8 @@ body, html {
     overflow: hidden;
     white-space: nowrap;
     font-size: 24px;
-    color: rgb(253, 251, 251);
+    color: white;
     animation: typing 3s steps(40, end) forwards; /* La animación se detiene al final */
-    font-size: 33px;
 }
 
 /* Animación de máquina de escribir */
@@ -498,26 +499,4 @@ body, html {
     to {
       transform: rotate(-1turn);
     }
-}
-
-.message-input{
-  width: 500px;
-}
-
-@media only screen and (max-width:768px){
-  .nav-dibujillo{
-    height: 85px;
   }
-
-  .message-input{
-    width: 250px;
-  }
-
-  .btn-file{
-    margin-left: 10px;
-  }
-
-  .welcome-label{
-    font-size: 20px;
-  }
-}

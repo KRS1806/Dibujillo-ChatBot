@@ -19,5 +19,4 @@ from django.urls import path, include
 
 urlpatterns = [
     path('', include('Chat.urls')),
-    path('', include('pwa.urls')),
 ]
