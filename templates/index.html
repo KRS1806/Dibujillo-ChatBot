@@ -3,7 +3,7 @@
 {% block content %}
 <section class="background position-relative">
     <div class="container">
-        <div class="welcome-label" id="welcome-label" style="color: rgb(253, 251, 251); font-size: 33px;">
+        <div class="welcome-label" id="welcome-label">
             Formato permitido jpg, jpeg o png.. <span style="filter: brightness(0) invert(1);"></span>
         </div>
 
@@ -48,14 +48,13 @@
             <div class="d-flex">
                 <form id="chat-form" style="display: flex;" class="w-100">
                     <!-- Botón de selección de archivo con icono de flecha hacia arriba -->
-                    <button class="btn-rosado-vino" id="imageButton" type="button">
+                    <button class="btn-rosado-vino btn-file" id="imageButton" type="button">
                         <i class="fas fa-arrow-up"></i>
                         <input type="file" id="imageInput" accept=".jpg, .jpeg, .png" style="display: none;">
                     </button>
 
                     <!-- Input de texto (con flex-grow para ocupar el espacio disponible) -->
-                    <input type="text" autofocus id="textInput" placeholder="Escribe tu mensaje aquí..." required
-                        class="form-control mx-1" style="flex-grow: 1; width: 500px;">
+                    <input type="text" autofocus id="textInput" placeholder="Escribe tu mensaje aquí..." required class="form-control mx-1 message-input" style="flex-grow: 1;">
 
                     <!-- Botón de enviar mensaje con icono de flecha hacia la derecha -->
                     <button type="submit" class="btn-rosado-vino">
