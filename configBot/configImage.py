@@ -43,6 +43,7 @@ def query(message: str, image):
 
         1. Si es borrosa o poco clara la imagen dilo y no inventes cosas, menciona lo que logres reconocer. \n
         2. Intenta usar un lenguaje sencillo y claro. \n
+        3. Evita usar simbolos como el: *, +, -, @, etc. \n
 
         Esta es la pregunta del usuario: {query}
         """,
